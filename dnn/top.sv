@@ -12,11 +12,11 @@ output out10_ready, out11_ready;
 
 //Activation IP/OP
 reg signed [4:0] w0, w1, w2, w3;
-reg signed [10:0] w4, w5, w6, w7;
-reg [10:0] w4_relu, w5_relu, w6_relu, w7_relu;
-reg signed [10:0] a4, a5, a6, a7;
+reg signed [11:0] w4, w5, w6, w7;
+reg signed [11:0] w4_relu, w5_relu, w6_relu, w7_relu;
+reg signed [11:0] a4, a5, a6, a7;
 reg signed [16:0] w8, w9;
-reg [16:0] a8, a9;
+reg signed [16:0] a8, a9;
   
 //Weights MAC Layer 1
   wire signed [4:0] wt04, wt05, wt06, wt07;
@@ -89,10 +89,10 @@ always@(posedge clk) begin
 
 	//Stage - 3
 	if(stage2 && in_ready) begin
-		w4_relu <= (w4[10]==1'b1) ? 0 : w4;
-		w5_relu <= (w5[10]==1'b1) ? 0 : w5;
-		w6_relu <= (w6[10]==1'b1) ? 0 : w6;
-		w7_relu <= (w7[10]==1'b1) ? 0 : w7;	
+		w4_relu <= (w4[11]==1'b1) ? 0 : w4;
+		w5_relu <= (w5[11]==1'b1) ? 0 : w5;
+		w6_relu <= (w6[11]==1'b1) ? 0 : w6;
+		w7_relu <= (w7[11]==1'b1) ? 0 : w7;	
 		stage3 <= 1'b1;
 	end
 	else begin
