@@ -13,10 +13,10 @@ reg [4:0] w49, w59, w69, w79;
 
 reg clk;
 
-wire [20:0] out0_node0, out1_node0;
-wire [20:0] out0_node1, out1_node1;
-wire [20:0] out0_node2, out1_node2;
-wire [20:0] out0_node3, out1_node3;
+wire signed [20:0] out0_node0, out1_node0;
+wire signed [20:0] out0_node1, out1_node1;
+wire signed [20:0] out0_node2, out1_node2;
+wire signed [20:0] out0_node3, out1_node3;
 
 wire out10_ready_node0, out11_ready_node0;
 wire out10_ready_node1, out11_ready_node1;
@@ -56,50 +56,50 @@ initial begin
     clk = 0;
     in_ready = 1; 
     
-    x0_node0 = 5'b0100;
-    x1_node0 = 5'b0010;
-    x2_node0 = 5'b0100;
-    x3_node0 = 5'b0001;
+    x0_node0 = 4;
+    x1_node0 = 2;
+    x2_node0 = 4;
+    x3_node0 = 1;
     
-    x0_node1 = 5'b0110;
-    x1_node1 = 5'b0100;
-    x2_node1 = 5'b0100;
-    x3_node1 = 5'b0001;
+    x0_node1 = 6;
+    x1_node1 = 4;
+    x2_node1 = 4;
+    x3_node1 = 1;
     
-    x0_node2 = 5'b1000;
-    x1_node2 = 5'b0110;
-    x2_node2 = 5'b0100;
-    x3_node2 = 5'b0001;
+    x0_node2 = 8;
+    x1_node2 = 6;
+    x2_node2 = 4;
+    x3_node2 = 1;
     
-    x0_node3 = 5'b0110;
-    x1_node3 = 5'b0100;
-    x2_node3 = 5'b0100;
-    x3_node3 = 5'b0001;
+    x0_node3 = 6;
+    x1_node3 = 4;
+    x2_node3 = 4;
+    x3_node3 = 1;
     
-    w04 = 5'b00011;
-    w14 = 5'b00010;
-    w24 = 5'b01101;
-    w34 = 5'b11010;
-    w05 = 5'b10111;
-    w15 = 5'b00001;
-    w25 = 5'b11100;
-    w35 = 5'b01110;
-    w06 = 5'b00011;
-    w16 = 5'b00110;
-    w26 = 5'b10001;
-    w36 = 5'b01111;
-    w07 = 5'b01001;
-    w17 = 5'b10110;
-    w27 = 5'b01111;
-    w37 = 5'b10110;
-    w48 = 5'b00000;
-    w58 = 5'b11111;
-    w68 = 5'b00011;
-    w78 = 5'b10101;
-    w49 = 5'b10100;
-    w59 = 5'b10001;
-    w69 = 5'b10001;
-    w79 = 5'b00110;
+    w04 = 3;
+    w14 = 2;
+    w24 = 13;
+    w34 = -6;
+    w05 = -9;
+    w15 = 1;
+    w25 = -4;
+    w35 = 14;
+    w06 = 3;
+    w16 = 6;
+    w26 = -15;
+    w36 = 15;
+    w07 = 9;
+    w17 = -10;
+    w27 = 15;
+    w37 = -10;
+    w48 = 0;
+    w58 = -1;
+    w68 = 3;
+    w78 = -11;
+    w49 = -12;
+    w59 = -15;
+    w69 = -15;
+    w79 = 6;
 
     #50
 	$display("Node 0 -> out0: %d, out1: %d\n",out0_node0, out1_node0);
