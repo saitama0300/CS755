@@ -13,10 +13,10 @@ reg [4:0] w49, w59, w69, w79;
 
 reg clk;
 
-wire signed [20:0] out0_node0, out1_node0;
-wire signed [20:0] out0_node1, out1_node1;
-wire signed [20:0] out0_node2, out1_node2;
-wire signed [20:0] out0_node3, out1_node3;
+wire [20:0] out0_node0, out1_node0;
+wire [20:0] out0_node1, out1_node1;
+wire [20:0] out0_node2, out1_node2;
+wire [20:0] out0_node3, out1_node3;
 
 wire out10_ready_node0, out11_ready_node0;
 wire out10_ready_node1, out11_ready_node1;
@@ -56,56 +56,272 @@ initial begin
     clk = 0;
     in_ready = 1; 
     
-    x0_node0 = 4;
-    x1_node0 = 2;
-    x2_node0 = 4;
-    x3_node0 = 1;
+    x0_node0 = 5'b0100;
+    x1_node0 = 5'b0010;
+    x2_node0 = 5'b0100;
+    x3_node0 = 5'b0001;
     
-    x0_node1 = 6;
-    x1_node1 = 4;
-    x2_node1 = 4;
-    x3_node1 = 1;
+    x0_node1 = 5'b0110;
+    x1_node1 = 5'b0100;
+    x2_node1 = 5'b0100;
+    x3_node1 = 5'b0001;
     
-    x0_node2 = 8;
-    x1_node2 = 6;
-    x2_node2 = 4;
-    x3_node2 = 1;
+    x0_node2 = 5'b1000;
+    x1_node2 = 5'b0110;
+    x2_node2 = 5'b0100;
+    x3_node2 = 5'b0001;
     
-    x0_node3 = 6;
-    x1_node3 = 4;
-    x2_node3 = 4;
-    x3_node3 = 1;
+    x0_node3 = 5'b0110;
+    x1_node3 = 5'b0100;
+    x2_node3 = 5'b0100;
+    x3_node3 = 5'b0001;
     
-    w04 = 3;
-    w14 = 2;
-    w24 = 13;
-    w34 = -6;
-    w05 = -9;
-    w15 = 1;
-    w25 = -4;
-    w35 = 14;
-    w06 = 3;
-    w16 = 6;
-    w26 = -15;
-    w36 = 15;
-    w07 = 9;
-    w17 = -10;
-    w27 = 15;
-    w37 = -10;
-    w48 = 0;
-    w58 = -1;
-    w68 = 3;
-    w78 = -11;
-    w49 = -12;
-    w59 = -15;
-    w69 = -15;
-    w79 = 6;
+    w04 = 5'b00011;
+    w14 = 5'b00010;
+    w24 = 5'b01101;
+    w34 = 5'b11010;
+    w05 = 5'b10111;
+    w15 = 5'b00001;
+    w25 = 5'b11100;
+    w35 = 5'b01110;
+    w06 = 5'b00011;
+    w16 = 5'b00110;
+    w26 = 5'b10001;
+    w36 = 5'b01111;
+    w07 = 5'b01001;
+    w17 = 5'b10110;
+    w27 = 5'b01111;
+    w37 = 5'b10110;
+    w48 = 5'b00000;
+    w58 = 5'b11111;
+    w68 = 5'b00011;
+    w78 = 5'b10101;
+    w49 = 5'b10100;
+    w59 = 5'b10001;
+    w69 = 5'b10001;
+    w79 = 5'b00110;
 
-    #50
-	$display("Node 0 -> out0: %d, out1: %d\n",out0_node0, out1_node0);
-	$display("Node 1 -> out0: %d, out1: %d\n",out0_node1, out1_node1);
-	$display("Node 2 -> out0: %d, out1: %d\n",out0_node2, out1_node2);
-	$display("Node 3 -> out0: %d, out1: %d\n",out0_node3, out1_node3);
+    #40
+    if (out0_node0 == -20'd6358)
+        $display("-----------out0_node0 is correct-----------------");
+    else
+        $display("-----------out0_node0 is incorrect-----------");
+    if (out1_node0 == -20'd4188)
+        $display("-----------out1_node0 is correct-----------");
+    else
+        $display("-----------out1_node0 is incorrect-----------");
+
+    if (out0_node1 == -20'd6309)
+        $display("-----------out0_node1 is correct-----------------");
+    else
+        $display("-----------out0_node1 is incorrect-----------");
+    if (out1_node1 == -20'd4455)
+        $display("-----------out1_node1 is correct-----------");
+    else
+        $display("-----------out1_node1 is incorrect-----------");
+
+    if (out0_node2 == -20'd6287)
+        $display("-----------out0_node2 is correct-----------------");
+    else
+        $display("-----------out0_node2 is incorrect-----------");
+    if (out1_node2 == -20'd4587)
+        $display("-----------out1_node2 is correct-----------");
+    else
+        $display("-----------out1_node2 is incorrect-----------");
+
+    if (out0_node3 == -20'd6309)
+        $display("-----------out0_node3 is correct-----------------");
+    else
+        $display("-----------out0_node3 is incorrect-----------");
+    if (out1_node3 == -20'd4455)
+        $display("-----------out1_node3 is correct-----------");
+    else
+        $display("-----------out1_node3 is incorrect-----------");
+
+    $display("--------------------------------------");
+
+
+    //Min
+    #40
+    in_ready = 0;
+    #40
+    in_ready = 1; 
+
+    x0_node0 = -5'd16;
+    x1_node0 = -5'd16;
+    x2_node0 = -5'd16;
+    x3_node0 = -5'd16;
+    
+    x0_node1 = -5'd16;
+    x1_node1 = -5'd16;
+    x2_node1 = -5'd16;
+    x3_node1 = -5'd16;
+    
+    x0_node2 = -5'd16;
+    x1_node2 = -5'd16;
+    x2_node2 = -5'd16;
+    x3_node2 = -5'd16;
+    
+    x0_node3 = -5'd16;
+    x1_node3 = -5'd16;
+    x2_node3 = -5'd16;
+    x3_node3 = -5'd16;
+    
+    w04 = -5'd16;
+    w14 = -5'd16;
+    w24 = -5'd16;
+    w34 = -5'd16;
+    w05 = -5'd16;
+    w15 = -5'd16;
+    w25 = -5'd16;
+    w35 = -5'd16;
+    w06 = -5'd16;
+    w16 = -5'd16;
+    w26 = -5'd16;
+    w36 = -5'd16;
+    w07 = -5'd16;
+    w17 = -5'd16;
+    w27 = -5'd16;
+    w37 = -5'd16;
+    w48 = -5'd16;
+    w58 = -5'd16;
+    w68 = -5'd16;
+    w78 = -5'd16;
+    w49 = -5'd16;
+    w59 = -5'd16;
+    w69 = -5'd16;
+    w79 = -5'd16;
+
+    #40
+    if (out0_node0 == -20'd589824)
+        $display("-----------out0_node0 is correct-----------------");
+    else
+        $display("-----------out0_node0 is incorrect-----------");
+    if (out1_node0 == -20'd589824)
+        $display("-----------out1_node0 is correct-----------");
+    else
+        $display("-----------out1_node0 is incorrect-----------");
+
+    if (out0_node1 == -20'd589824)
+        $display("-----------out0_node1 is correct-----------------");
+    else
+        $display("-----------out0_node1 is incorrect-----------");
+    if (out1_node1 == -20'd589824)
+        $display("-----------out1_node1 is correct-----------");
+    else
+        $display("-----------out1_node1 is incorrect-----------");
+
+    if (out0_node2 == -20'd589824)
+        $display("-----------out0_node2 is correct-----------------");
+    else
+        $display("-----------out0_node2 is incorrect-----------");
+    if (out1_node2 == -20'd589824)
+        $display("-----------out1_node2 is correct-----------");
+    else
+        $display("-----------out1_node2 is incorrect-----------");
+
+    if (out0_node3 == -20'd589824)
+        $display("-----------out0_node3 is correct-----------------");
+    else
+        $display("-----------out0_node3 is incorrect-----------");
+    if (out1_node3 == -20'd589824)
+        $display("-----------out1_node3 is correct-----------");
+    else
+        $display("-----------out1_node3 is incorrect-----------");
+
+    $display("--------------------------------------");
+
+
+    //Max
+    #40
+    in_ready = 0;
+    #40
+    in_ready = 1; 
+
+    x0_node0 = 5'd15;
+    x1_node0 = 5'd15;
+    x2_node0 = 5'd15;
+    x3_node0 = 5'd15;
+    
+    x0_node1 = 5'd15;
+    x1_node1 = 5'd15;
+    x2_node1 = 5'd15;
+    x3_node1 = 5'd15;
+    
+    x0_node2 = 5'd15;
+    x1_node2 = 5'd15;
+    x2_node2 = 5'd15;
+    x3_node2 = 5'd15;
+    
+    x0_node3 = 5'd15;
+    x1_node3 = 5'd15;
+    x2_node3 = 5'd15;
+    x3_node3 = 5'd15;
+    
+    w04 = 5'd15;
+    w14 = 5'd15;
+    w24 = 5'd15;
+    w34 = 5'd15;
+    w05 = 5'd15;
+    w15 = 5'd15;
+    w25 = 5'd15;
+    w35 = 5'd15;
+    w06 = 5'd15;
+    w16 = 5'd15;
+    w26 = 5'd15;
+    w36 = 5'd15;
+    w07 = 5'd15;
+    w17 = 5'd15;
+    w27 = 5'd15;
+    w37 = 5'd15;
+    w48 = 5'd15;
+    w58 = 5'd15;
+    w68 = 5'd15;
+    w78 = 5'd15;
+    w49 = 5'd15;
+    w59 = 5'd15;
+    w69 = 5'd15;
+    w79 = 5'd15;
+
+    #40
+    if (out0_node0 == 20'd486000)
+        $display("-----------out0_node0 is correct-----------------");
+    else
+        $display("-----------out0_node0 is incorrect-----------");
+    if (out1_node0 == 20'd486000)
+        $display("-----------out1_node0 is correct-----------");
+    else
+        $display("-----------out1_node0 is incorrect-----------");
+
+    if (out0_node1 == 20'd486000)
+        $display("-----------out0_node1 is correct-----------------");
+    else
+        $display("-----------out0_node1 is incorrect-----------");
+    if (out1_node1 == 20'd486000)
+        $display("-----------out1_node1 is correct-----------");
+    else
+        $display("-----------out1_node1 is incorrect-----------");
+
+    if (out0_node2 == 20'd486000)
+        $display("-----------out0_node2 is correct-----------------");
+    else
+        $display("-----------out0_node2 is incorrect-----------");
+    if (out1_node2 == 20'd486000)
+        $display("-----------out1_node2 is correct-----------");
+    else
+        $display("-----------out1_node2 is incorrect-----------");
+
+    if (out0_node3 == 20'd486000)
+        $display("-----------out0_node3 is correct-----------------");
+    else
+        $display("-----------out0_node3 is incorrect-----------");
+    if (out1_node3 == 20'd486000)
+        $display("-----------out1_node3 is correct-----------");
+    else
+        $display("-----------out1_node3 is incorrect-----------");
+
+    $display("--------------------------------------");
+
 end
 
 
@@ -114,7 +330,7 @@ always
 
 
 initial
-    #100 $finish;
+    #1000 $finish;
 
 
 endmodule
