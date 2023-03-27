@@ -1,0 +1,18 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03-SP3
+Date:        Mon Mar 27 15:30:55 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Shorted outputs (LINT-31)                                       4
+--------------------------------------------------------------------------------
+
+Warning: In design 'top', output port 'out10_ready_node0' is connected directly to output port 'out11_ready_node0'. (LINT-31)
+Warning: In design 'top', output port 'out10_ready_node1' is connected directly to output port 'out11_ready_node1'. (LINT-31)
+Warning: In design 'top', output port 'out10_ready_node2' is connected directly to output port 'out11_ready_node2'. (LINT-31)
+Warning: In design 'top', output port 'out10_ready_node3' is connected directly to output port 'out11_ready_node3'. (LINT-31)
+1

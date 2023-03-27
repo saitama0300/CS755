@@ -1,0 +1,75 @@
+Loading db file '/cae/apps/data/synopsys-2022/syn/T-2022.03-SP3/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2022/syn/T-2022.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'asap7sc7p5t_AO_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_OA_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_INVBUF_RVT_TT_nldm_211120'
+  Loading link library 'asap7sc7p5t_SEQ_RVT_TT_nldm_220123'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (top)
+Elaborated 1 design.
+Current design is now 'top'.
+Information: Building the design 'dnn'. (HDL-193)
+Warning:  ./dnn.sv:56: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./dnn.sv:57: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./dnn.sv:60: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:61: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:62: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:63: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:64: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:65: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:66: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:67: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:68: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:69: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:70: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:71: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:72: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:74: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:75: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:78: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:79: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:80: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:81: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:83: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:84: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:85: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:86: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine dnn line 96 in file
+		'./dnn.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     stage1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       w0_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w1_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w2_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w3_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       w4_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w5_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w6_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w7_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage3_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     w4_relu_reg     | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|     w5_relu_reg     | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|     w6_relu_reg     | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|     w7_relu_reg     | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage4_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       a4_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       a5_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       a6_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       a7_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage5_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       w8_reg        | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|       w9_reg        | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage6_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       a8_reg        | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+|       a9_reg        | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dnn)
+1
