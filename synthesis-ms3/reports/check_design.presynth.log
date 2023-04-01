@@ -2,7 +2,7 @@
 ****************************************
 check_design summary:
 Version:     T-2022.03-SP3
-Date:        Mon Mar 27 15:30:16 2023
+Date:        Fri Mar 31 22:55:25 2023
 ****************************************
 
                    Name                                            Total
@@ -10,13 +10,15 @@ Date:        Mon Mar 27 15:30:16 2023
 Inputs/Outputs                                                      1
     Shorted outputs (LINT-31)                                       1
 
-Cells                                                               4
-    Cells do not drive (LINT-1)                                     4
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     6
 --------------------------------------------------------------------------------
 
 Warning: In design 'dnn', cell 'B_4' does not drive any nets. (LINT-1)
 Warning: In design 'dnn', cell 'B_5' does not drive any nets. (LINT-1)
 Warning: In design 'dnn', cell 'B_6' does not drive any nets. (LINT-1)
 Warning: In design 'dnn', cell 'B_7' does not drive any nets. (LINT-1)
+Warning: In design 'dnn', cell 'B_8' does not drive any nets. (LINT-1)
+Warning: In design 'dnn', cell 'B_9' does not drive any nets. (LINT-1)
 Warning: In design 'dnn', output port 'out0_ready' is connected directly to output port 'out1_ready'. (LINT-31)
 1

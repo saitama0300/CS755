@@ -11,35 +11,35 @@ Presto compilation completed successfully. (top)
 Elaborated 1 design.
 Current design is now 'top'.
 Information: Building the design 'dnn'. (HDL-193)
-Warning:  ./dnn.sv:56: signed to unsigned assignment occurs. (VER-318)
-Warning:  ./dnn.sv:57: signed to unsigned assignment occurs. (VER-318)
-Warning:  ./dnn.sv:60: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:61: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:62: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:63: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:64: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:65: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:66: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:67: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:68: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:69: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:70: unsigned to signed assignment occurs. (VER-318)
-Warning:  ./dnn.sv:71: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:68: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./dnn.sv:69: signed to unsigned assignment occurs. (VER-318)
 Warning:  ./dnn.sv:72: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:73: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:74: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:75: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:76: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:77: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:78: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:79: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:80: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:81: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:82: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:83: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:84: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:85: unsigned to signed assignment occurs. (VER-318)
 Warning:  ./dnn.sv:86: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:87: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:90: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:91: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:92: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:93: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:95: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:96: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:97: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./dnn.sv:98: unsigned to signed assignment occurs. (VER-318)
 
 Inferred memory devices in process
-	in routine dnn line 96 in file
+	in routine dnn line 108 in file
 		'./dnn.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -50,6 +50,23 @@ Inferred memory devices in process
 |       w2_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
 |       w3_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
 |     stage2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wmul04_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul34_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul24_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul14_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul05_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul35_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul25_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul15_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul06_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul36_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul26_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul16_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul07_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul37_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul27_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul17_reg      | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage2a_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |       w4_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
 |       w5_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
 |       w6_reg        | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
@@ -65,6 +82,15 @@ Inferred memory devices in process
 |       a6_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
 |       a7_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
 |     stage5_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     wmul48_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul58_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul68_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul78_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul49_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul59_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul69_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wmul79_reg      | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|     stage5a_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |       w8_reg        | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
 |       w9_reg        | Flip-flop |  21   |  Y  | N  | N  | N  | N  | N  | N  |
 |     stage6_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
